@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: normal ;
+}
+button{
+    box-shadow: none !important;
+    height: 45px !important;
+    border-radius: 2px !important;
+    
+}
+input , select , textarea{
+    height:40px !important ;
+    width: 100% !important;
+    border: 1px solid #ccc;
+    padding-left: 20px;
+    border-radius: 2px !important;
+}
+input:focus , select:focus , textarea:focus{
+    outline: none !important;
+    border: 1px solid #303030;
+    box-shadow: none !important;
+}
+.ant-form-item{
+    margin-bottom: 0px !important;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+    color: #141E46;
+}
+i{
+    font-size: 20px !important;
+    cursor: pointer;
+}
+.ant-form-item-label{
+    padding: 0px !important;
+}    
+table{
+    border: 1px solid #878787 !important;
+}
+.ant-select-selector{
+    border: 1px solid #303030 !important;
+    border-radius: 2px !important;
+}
+.ant-select-selector:hover{
+    border: 1px solid #303030 !important;
+    border-radius: 2px !important;
+}
+.ant-select-selector input{
+    border: none !important;
+    height: 40px !important;
+}
+textarea{
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    min-height: 100px !important;
+}
+
+.ant-switch {
+    height: 22px !important;
+    border-radius: 10px !important;
+}
+/* Quick Serach & Filters */
+.quick-search-results {
+    height: 500px !important;
+    overflow-y: auto ;
+    width: 100% !important;
+    border: 1px solid #0330f6e4;
+    background-color: #c0c0c0;
+    position: absolute;
+    z-index: 100;
+    top: 45px;
+    box-shadow: 1px 1px 2px #ccc;
+}
