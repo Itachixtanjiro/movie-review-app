@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Rate, Table, message } from "antd";
 import { SetLoading } from "../../redux/loadSlice";
-import { useNavigate, useParams } from "react-router-dom";
 import { getDateTimeFormat } from "../../helpers";
 import { DeleteReview, GetAllReviews } from "../../apis/reviews";
 import { ReviewForm } from "../MovieInfo/ReviewForm";

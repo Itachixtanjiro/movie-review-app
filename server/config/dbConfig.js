@@ -1,8 +1,5 @@
 const mongoose =require('mongoose');
-mongoose.connect(process.env.mongo_url ,{
-    useNewUrlParser: true, 
-    useUnifiedTopology: true, 
-}).catch(err => {
+mongoose.connect(process.env.mongo_url ,).catch(err => {
     console.error('MongoDB connection error:', err);
     process.exit();
 });

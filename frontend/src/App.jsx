@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/home";
-import Login from "./pages/login";
+import Home from "./pages/home/index.jsx"
+import Login from "./pages/login/index.jsx";
 import Register from "./pages/register";
 import ProtectedPage from "./components/ProtectedPage.jsx";
-import Profile from "./pages/profile";
+import Profile from "./pages/profile/index.jsx";
 import Spinner from "./components/Spinner.jsx";
 import { useSelector } from "react-redux";
 import Admin from "./pages/admin/index.jsx";

@@ -7,7 +7,7 @@ import { SetLoading } from "../../redux/loadSlice";
 import { useNavigate, useParams } from "react-router-dom";
 import { GetMovieById } from "../../apis/movies";
 import { getDateFormat,getDateTimeFormat } from "../../helpers";
-import ReviewForm from "./ReviewForm";
+import ReviewForm from "../MovieInfo/ReviewForm";
 import { GetAllReviews } from "../../apis/reviews";
 function MovieInfo() {
   const [reviews, setReviews] = useState();
@@ -15,7 +15,6 @@ function MovieInfo() {
   const navigate = useNavigate();
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
-  const { user } = useSelector((state) => state.users);
   const dispatch = useDispatch();
   const getData = async () => {
     try {

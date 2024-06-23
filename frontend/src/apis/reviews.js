@@ -1,6 +1,6 @@
 import apiRequest from ".";
 
-export const addReview = async(payload) => {
+export const AddReview = async(payload) => {
     return await apiRequest({
         method: 'POST',
         endpoint:"/api/reviews",

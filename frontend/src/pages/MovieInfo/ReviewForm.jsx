@@ -1,10 +1,11 @@
-import { Modal, message } from "antd";
+import { Modal,Rate, message } from "antd";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { SetLoading } from "../../redux/loadSlice";
 import { useEffect } from "react";
+import { AddReview, UpdateReview } from "../../apis/reviews";
 
-function ReviewForm(
+export const ReviewForm = function ReviewForm(
   movie,
   reloadData,
   showreviewForm,
@@ -19,14 +20,14 @@ function ReviewForm(
       dispatch(SetLoading(true));
       let response = null;
       if (selectedReviews) {
-        response =await UpdateReviews({
+        response =await UpdateReview({
           _id: selectedReviews._id,
           movie: movie._id,
           rating,
           comment,
         });
       } else {
-        response= await addReview({
+        response= await AddReview({
           movie: movie._id,
           rating,
           comment,
@@ -79,3 +80,4 @@ function ReviewForm(
 }
 
 export default ReviewForm;
+
