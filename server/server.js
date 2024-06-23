@@ -3,8 +3,7 @@ const app = express();
 
 require("dotenv").config();
 const dbConfig = require("./config/dbConfig.js");
-var cors = require("cors");
-app.use(cors());
+
 app.use(express.json());
 const userRoute = require("./routes/userRoute.js");
 const artistRoute = require("./routes/artistRoute.js"); // corrected the spelling of 'artistRoute.js'
@@ -28,4 +27,4 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
   });
 }
-app.listen(port, () => console.log(`Server started on port ${port}`)); // corrected the console.log to properly display the port number
+app.listen(port , () => console.log(`Node JS Server started on port ${port}`));
